@@ -16,33 +16,33 @@
     border: none;
     outline: none;
 }
-::selection
-{
+
+::selection {
     background-color: #C91B28;
     color: #fff;
 }
 
-::-webkit-scrollbar
-{
+::-webkit-scrollbar {
     width: 12px;
 }
-::-webkit-scrollbar-track
-{
-    background:rgba(0, 0, 0, 0.8);
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.8);
 }
-::-webkit-scrollbar-thumb
-{
+
+::-webkit-scrollbar-thumb {
     background-color: var(--bg-crimson);
     border-radius: 40px;
 }
-body
-{
+
+body {
     width: 100vw;
     height: 100vh;
     overflow-y: scroll;
     overflow-x: hidden;
     scroll-snap-type: y mandatory;
 }
+
 nav {
     position: relative;
     scroll-snap-align: start;
@@ -283,11 +283,11 @@ section.project_gellary {
     margin-top: 50px;
     display: grid;
     place-items: center;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
 }
-.project_card
-{
+
+.project_card {
     /* width: 80%; */
     display: flex;
     align-items: center;
@@ -295,19 +295,19 @@ section.project_gellary {
     flex-direction: column;
     background-color: #1E1E1E;
 }
-.card_image
-{
+
+.card_image {
     padding: 80px 40px;
     /* width: 500px; */
 }
-.card_image img
-{
+
+.card_image img {
     width: 100%;
     height: 400px;
     object-fit: cover;
 }
-.btn_group
-{
+
+.btn_group {
     display: block;
     width: 100%;
     display: flex;
@@ -315,15 +315,15 @@ section.project_gellary {
     padding: 20px 0px;
     background-color: var(--bg-black);
 }
-.btn_group h3
-{
+
+.btn_group h3 {
     color: var(--text-white);
     font-weight: 700;
     font-size: 30px;
     font-family: arial;
-} 
-.btn_group .btn1
-{
+}
+
+.btn_group .btn1 {
     color: var(--text-crimson);
     font-size: 18px;
     font-weight: 700;
@@ -335,49 +335,50 @@ section.project_gellary {
     text-align: left;
     background-color: transparent;
 }
-.btn_group .btn1 img
-{
+
+.btn_group .btn1 img {
     width: 20px;
 }
+
 /* -------------------contact section started--------- */
-.contact
-{
+.contact {
     scroll-snap-align: start;
     padding: 100px var(--padding-inline);
     background-color: var(--bg-black);
 }
-.contact_container
-{
-     padding: 40px;
-     background-color: var(--bg-grey);
-     display: flex;
-     align-items: center;
-     justify-content: space-around;
+
+.contact_container {
+    padding: 40px;
+    background-color: var(--bg-grey);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
 }
 
-.contact_text h1
-{
+.contact_text h1 {
     color: var(--text-white);
     font-family: arial;
     font-size: 50px;
 }
-.contact_text p
-{
+
+.contact_text p {
     font-family: arial;
     padding: 30px 0px;
     width: 80%;
     color: rgba(255, 255, 255, 0.532);
 }
-.contact_btn
-{
+
+.contact_btn {
     background-color: var(--bg-crimson);
     color: #fff;
     font-size: 18px;
     font-weight: 600;
     padding: 15px 40px;
 }
-footer ul
-{
+
+footer ul {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -388,32 +389,28 @@ footer ul
     font-family: arial;
     padding: 30px 0px;
 }
-footer ul:nth-child(2)
-{
+
+footer ul:nth-child(2) {
     background-color: var(--bg-grey);
     padding: 30px 0px;
 }
 
-footer ul:nth-child(2) li:first-child img
-{
+footer ul:nth-child(2) li:first-child img {
     width: 80px;
 }
 
-.menuIcon
-{
+.menuIcon {
     display: none;
 }
 
-@media screen and (max-width:1030px)
-{
-    .menuIcon
-    {
+@media screen and (max-width:1030px) {
+    .menuIcon {
         display: inline;
         color: #fff;
         font-size: 25px;
     }
-    nav ul
-    {
+
+    nav ul {
         position: absolute;
         width: 100%;
         height: 100vh;
@@ -422,86 +419,93 @@ footer ul:nth-child(2) li:first-child img
         justify-content: space-around;
         flex-direction: column;
         padding: 20px;
-        background: rgba(0, 0, 0,.6);
+        background: rgba(0, 0, 0, .6);
         top: 80%;
         left: 0;
         backdrop-filter: blur(50px);
-        border-radius: 10px;        
+        border-radius: 10px;
     }
-    nav ul li
-    {
-        font-size:3rem;
+
+    nav ul li {
+        font-size: 3rem;
 
     }
-    .menuIcon:focus ~  ul
-    {
+
+    .menuIcon:focus~ul {
         display: flex;
     }
 }
-@media screen and (max-width:1500px){
-    .card__container
-    {
+
+@media screen and (max-width:1500px) {
+    .card__container {
         grid-template-columns: 1fr 1fr;
         gap: 40px;
     }
 }
-@media screen and (max-width:1030px){
-    .card__container
-    {
+
+@media screen and (max-width:1030px) {
+    .card__container {
         grid-template-columns: 1fr;
         gap: 40px;
     }
 }
-@media screen and (max-width:1090px){
-    .card__container:nth-child(2)
-    {
+
+@media screen and (max-width:1090px) {
+    .card__container:nth-child(2) {
         flex-wrap: wrap;
         align-items: center;
     }
-    .left__side
-    {
+
+    .left__side {
         margin: 0 auto;
     }
-    .right__side .inner__card__container
-    {
+
+    .right__side .inner__card__container {
         display: flex;
         flex-wrap: wrap;
-        justify-content:center;
+        justify-content: center;
         align-items: center;
     }
 }
-@media screen and (max-width:1550px){
-    .project_card_container
-    {
+
+@media screen and (max-width:1550px) {
+    .project_card_container {
         grid-template-columns: 1fr;
     }
 }
-@media screen and (max-width:1140px){
-    .profile__sectoin
-    {
+
+@media screen and (max-width:1140px) {
+    .profile__sectoin {
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
         gap: 40px;
     }
-    .profile__pic
-    {
+
+    .profile__pic {
         margin-top: 40px;
         width: 50%;
         border-radius: 50%;
         border: 10px solid #C91B28;
     }
 }
-@media screen and (max-width:460px){
-    .inner__card
-    {
+
+@media screen and (max-width:460px) {
+    .inner__card {
         width: 100%;
     }
-    .project_gellary .top__context
-    {
+
+    .project_gellary .top__context {
         flex-direction: column;
         align-items: center;
         justify-content: center;
         gap: 40px;
+    }
+}
+@media screen and (max-width:950px){
+    .card_image
+    {
+        padding: 0;
+        width:100%;
     }
 }
